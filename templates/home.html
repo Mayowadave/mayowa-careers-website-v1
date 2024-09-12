@@ -15,14 +15,20 @@
     </style>
 </head>
 <body>
+    {% include 'nav.html' %}
     <h1 class="text-center mb-3 mt-2">Mayowa Careers</h1>
-    <div class="container">
     <img id="banner" class="img-fluid" src="https://9372fe5b-f8a0-422a-a284-ae0fcb59d212-00-14p0y2nqxwlpt.worf.replit.dev/static/banner.jpg"height="320px" >
-    </div>
     <div class="container">
-        <h2 class="text-center mb-2 mt-2">About Mayowa</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2 class="text-center">Job Openings</h2>
+        <h2 class="text-center mb-2 mt-2">About Mayowa Careers</h2>
+        <div class='row'>
+            <div class='col-md-6'>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class='d-none d-md-block col-md-6'>
+            <img src='/static/people.jpg' style='height: 320px; border-radius: 4px;' >
+            </div>
+        </div>
+        <h2 class="text-center mt-4">Job Openings</h2>
         <div>
             {% for job in jobs %}
                 {% include 'jobitem.html' %}
@@ -30,11 +36,12 @@
         </div>
         <div>
             <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact us</button>
-                <p class="mt-4">Copyright 2024, Mayowa</p>
+            <a href='mailto:mayowadave91@gmail.com?subject=Info%20about%20Mayowa%20Careers&body=What's%20your%20question%3F' class="btn btn-primary btn-lg">Contact us</a>
             </div>
         </div>
     </div>
+
+    {% include 'footer.html'%}
 </body>
 
   
