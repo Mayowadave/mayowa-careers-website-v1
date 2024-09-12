@@ -25,7 +25,7 @@ JOBS = [
     'id': 4,
     'location': 'Warri, Nigeria',
     'title': 'Backend engineer',
-
+    'salary': 'N110,000'
   }
 ]
 
